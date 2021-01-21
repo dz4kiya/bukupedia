@@ -1,0 +1,10 @@
+BUKUPEDIA
+
+Kurnia Ainun Nisa        (H76219024)
+Acmad Maulana R.     (H96219034)
+Dzakiya Ishmatul U.     (H96219045)
+Roy Rafi Donisafaat     (H96219060)
+
+DBD KELAS B
+
+Harus install dan add library & plugin IReport terlebih dahulu
