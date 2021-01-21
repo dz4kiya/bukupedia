@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.3310000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="12"/>
+	<queryString>
+		<![CDATA[SELECT
+     transaksi_penjualan.`ID_PENJUALAN` AS transaksi_penjualan_ID_PENJUALAN,
+     transaksi_penjualan.`TGL_PENJUALAN` AS transaksi_penjualan_TGL_PENJUALAN,
+     transaksi_penjualan.`ID_BUKU` AS transaksi_penjualan_ID_BUKU,
+     transaksi_penjualan.`ID_KASIR` AS transaksi_penjualan_ID_KASIR,
+     transaksi_penjualan.`ID_PELANGGAN` AS transaksi_penjualan_ID_PELANGGAN,
+     transaksi_penjualan.`JUMLAH` AS transaksi_penjualan_JUMLAH,
+     transaksi_penjualan.`HARGA` AS transaksi_penjualan_HARGA,
+     transaksi_penjualan.`TOTAL` AS transaksi_penjualan_TOTAL,
+     buku.`TANGGAL_MASUK` AS buku_TANGGAL_MASUK,
+     buku.`ID_BUKU` AS buku_ID_BUKU,
+     buku.`ISBN` AS buku_ISBN,
+     buku.`JUDUL` AS buku_JUDUL,
+     buku.`PENULIS` AS buku_PENULIS,
+     buku.`STOK` AS buku_STOK,
+     buku.`HARGA` AS buku_HARGA,
+     buku.`KATEGORI` AS buku_KATEGORI,
+     buku.`PENERBIT` AS buku_PENERBIT,
+     buku.`RAK` AS buku_RAK,
+     buku.`TAHUN_TERBIT` AS buku_TAHUN_TERBIT,
+     buku.`ID_PEMBELIAN` AS buku_ID_PEMBELIAN
+FROM
+     `buku` buku INNER JOIN `transaksi_penjualan` transaksi_penjualan ON buku.`ID_BUKU` = transaksi_penjualan.`ID_BUKU`]]>
+	</queryString>
+	<field name="transaksi_penjualan_TGL_PENJUALAN" class="java.sql.Date"/>
+	<field name="transaksi_penjualan_ID_PENJUALAN" class="java.lang.String"/>
+	<field name="transaksi_penjualan_ID_PELANGGAN" class="java.lang.String"/>
+	<field name="transaksi_penjualan_ID_BUKU" class="java.lang.String"/>
+	<field name="buku_JUDUL" class="java.lang.String"/>
+	<field name="transaksi_penjualan_JUMLAH" class="java.lang.Integer"/>
+	<field name="transaksi_penjualan_HARGA" class="java.lang.Float"/>
+	<field name="transaksi_penjualan_TOTAL" class="java.lang.Float"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="172" y="-9" width="217" height="65"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN
+TRANSAKSI PENJUALAN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="-39" y="-8" width="632" height="1"/>
+			</line>
+			<line>
+				<reportElement x="-64" y="-5" width="657" height="1"/>
+			</line>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="359" y="15" width="170" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="66" y="30" width="50" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID PENJUALAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="30" width="63" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="30" width="56" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID CUST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="228" y="30" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUDUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="30" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JUMLAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="388" y="30" width="87" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="475" y="30" width="80" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="30" width="56" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID BUKU]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="73" y="20" width="43" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_ID_PENJUALAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="-1" y="20" width="74" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_TGL_PENJUALAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="20" width="56" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_ID_PELANGGAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="172" y="20" width="56" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_ID_BUKU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="20" width="112" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{buku_JUDUL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="475" y="20" width="80" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_TOTAL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0">
+				<reportElement x="388" y="20" width="87" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_HARGA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="20" width="48" height="20"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{transaksi_penjualan_JUMLAH}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
